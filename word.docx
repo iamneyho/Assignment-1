@@ -1,36 +1,43 @@
-Introduction:
+ Title: Women's Empowerment and Gender Parity Analysis Project
+
+ 
+
+Introduction:  
 This project utilizes global Women's Empowerment Index (WEI) data to predict the empowerment group of a country based on indicators like WEI, GGPI, and Sustainable Development Goal regions.
 
-Dataset:
-The dataset was sourced from Women’s Empowerment Index and includes features such as WEI, Gender Parity, and Human Development Group. Categorical variables were label-encoded, and numerical values were standardized.
+Dataset:  
+The dataset was sourced from [Women’s Empowerment Index](https://raw.githubusercontent.com/iamneyho/Assignment-1/refs/heads/main/women_empowerment_index.csv) and includes features such as WEI, Gender Parity, and Human Development Group. Categorical variables were label-encoded, and numerical values were standardized.
 
-Models:
+Models:  
 Six models were evaluated:
+1. Logistic Regression (LR)
+2. Linear Discriminant Analysis (LDA)
+3. K-Nearest Neighbors (KNN)
+4. Decision Tree Classifier (CART)
+5. Naive Bayes (NB)
+6. Support Vector Machine (SVM)
 
-Logistic Regression (LR)
-Linear Discriminant Analysis (LDA)
-K-Nearest Neighbors (KNN)
-Decision Tree Classifier (CART)
-Naive Bayes (NB)
-Support Vector Machine (SVM)
-Methodology:
+Methodology:  
 The data was split into features and target variable (Women’s Empowerment Group) and then into training and validation sets. K-fold cross-validation (K=10) provided accuracy metrics.
 
-Results:
+Results:  
 Here are the cross-validation accuracy scores:
 
-Model	Mean Accuracy	Standard Deviation
-LR	87.89%	7.80%
-LDA	80.33%	14.47%
-KNN	84.78%	10.84%
-CART	94.44%	10.24%
-NB	90.11%	9.22%
-SVM	89.00%	9.94%
+| Model |Mean Accuracy |Standard Deviation |
+|-------|--------------|-------------------|
+| LR    | 87.89%       | 7.80%             |
+| LDA   | 80.33%       | 14.47%            |
+| KNN   | 84.78%       | 10.84%            |
+| CART  | 94.44%       | 10.24%            |
+| NB    | 90.11%       | 9.22%             |
+| SVM   | 89.00%       | 9.94%             |
+
 The Decision Tree Classifier (CART) performed best with an accuracy of 94.44%.
 
-Visualization:
+Visualization:  
 The following boxplot compares model performance, showing that CART has the highest accuracy and consistency.
 
-
-Conclusion:
+Conclusion:  
 CART was the most accurate model for predicting Women’s Empowerment Group. For a new data example, the model predicted the group as "High."
+
+ 
