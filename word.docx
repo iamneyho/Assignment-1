@@ -1,21 +1,38 @@
- Title:  Women's Empowerment and Gender Parity Analysis Project
+Title: Women's Empowerment and Gender Parity Analysis Project
 
- Introduction: 
-Describe the objective of the project, which is to analyze the Women’s Empowerment Index (WEI), Global Gender Parity Index (GGPI), and other gender-related metrics across countries to identify patterns in women's empowerment globally. Mention the dataset source and any preprocessing required.
+Introduction:  
+This project aims to analyze the global Women's Empowerment Index (WEI) and the Global Gender Parity Index (GGPI) using country-specific data. The dataset includes metrics like Human Development Group and Sustainable Development Goal regions, and the analysis compares multiple models for predicting empowerment levels.
 
- Data Analysis: 
-- Outline key preprocessing steps, such as encoding categorical features (like "Women's Empowerment Group") and standardizing numeric data.
-- Describe the features (columns) in the dataset and the machine learning models used, such as Logistic Regression, K-Nearest Neighbors, and Support Vector Machines.
+Dataset:  
+The dataset is sourced from [Women’s Empowerment Index CSV](https://raw.githubusercontent.com/iamneyho/Assignment-1/refs/heads/main/women_empowerment_index.csv). Key features include WEI, GGPI, and categories like Women’s Empowerment Group and Gender Parity Group. Necessary preprocessing, such as encoding categorical variables and standardizing numerical data, was applied.
 
- Model Evaluation: 
-- Summarize the model comparison through K-fold cross-validation results. Include the boxplot of model accuracies and highlight the best-performing model.
+Models:  
+Six models were implemented:
+1. Logistic Regression (LR)
+2. Linear Discriminant Analysis (LDA)
+3. K-Nearest Neighbors (KNN)
+4. Decision Tree Classifier (CART)
+5. Naive Bayes (NB)
+6. Support Vector Machine (SVM)
 
- Results and Discussion: 
-- Briefly discuss the performance of each model and the accuracy scores obtained.
-- Mention the best model and interpret its accuracy in the context of predicting gender empowerment levels.
+Methodology:  
+The dataset was split into features (X) and the target variable (Women’s Empowerment Group), then into training and validation sets. We used K-fold cross-validation (K=10) to evaluate each model, obtaining accuracy scores.
 
- Prediction Example: 
-Include an example prediction on new data, if relevant. Describe the new data values and how the best model predicts gender empowerment.
+Results:  
+The cross-validation results showed SVM as the best-performing model with the highest accuracy. Below is the accuracy comparison for each model:
 
- Conclusion: 
-Summarize findings, insights, and potential future improvements.
+| Model | Mean Accuracy| Standard Deviation|
+|-------|--------------| ------------------|
+| LR    | 85.71%       | 2.05%             |
+| LDA   | 92.79%       | 5.38%             |
+| KNN   | 92.32%       | 3.54%             |
+| CART  | 99.00%       | 2.00%             |
+| NB    | 93.82%       | 3.98%             |
+| SVM   | 96.92%       | 4.11%             |
+
+Visualization:  
+The boxplot compares model accuracy scores, demonstrating SVM’s superior performance.
+
+ 
+Conclusion:  
+The SVM model outperformed others in predicting empowerment levels with an accuracy of 96.92%. This project demonstrates that gender and empowerment metrics can be effectively modeled using machine learning, and SVM provides reliable predictions in this context.
