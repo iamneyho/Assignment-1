@@ -1,38 +1,36 @@
-Title: Women's Empowerment and Gender Parity Analysis Project
+Introduction:
+This project utilizes global Women's Empowerment Index (WEI) data to predict the empowerment group of a country based on indicators like WEI, GGPI, and Sustainable Development Goal regions.
 
-Introduction:  
-This project aims to analyze the global Women's Empowerment Index (WEI) and the Global Gender Parity Index (GGPI) using country-specific data. The dataset includes metrics like Human Development Group and Sustainable Development Goal regions, and the analysis compares multiple models for predicting empowerment levels.
+Dataset:
+The dataset was sourced from Women’s Empowerment Index and includes features such as WEI, Gender Parity, and Human Development Group. Categorical variables were label-encoded, and numerical values were standardized.
 
-Dataset:  
-The dataset is sourced from [Women’s Empowerment Index CSV](https://raw.githubusercontent.com/iamneyho/Assignment-1/refs/heads/main/women_empowerment_index.csv). Key features include WEI, GGPI, and categories like Women’s Empowerment Group and Gender Parity Group. Necessary preprocessing, such as encoding categorical variables and standardizing numerical data, was applied.
+Models:
+Six models were evaluated:
 
-Models:  
-Six models were implemented:
-1. Logistic Regression (LR)
-2. Linear Discriminant Analysis (LDA)
-3. K-Nearest Neighbors (KNN)
-4. Decision Tree Classifier (CART)
-5. Naive Bayes (NB)
-6. Support Vector Machine (SVM)
+Logistic Regression (LR)
+Linear Discriminant Analysis (LDA)
+K-Nearest Neighbors (KNN)
+Decision Tree Classifier (CART)
+Naive Bayes (NB)
+Support Vector Machine (SVM)
+Methodology:
+The data was split into features and target variable (Women’s Empowerment Group) and then into training and validation sets. K-fold cross-validation (K=10) provided accuracy metrics.
 
-Methodology:  
-The dataset was split into features (X) and the target variable (Women’s Empowerment Group), then into training and validation sets. We used K-fold cross-validation (K=10) to evaluate each model, obtaining accuracy scores.
+Results:
+Here are the cross-validation accuracy scores:
 
-Results:  
-The cross-validation results showed SVM as the best-performing model with the highest accuracy. Below is the accuracy comparison for each model:
+Model	Mean Accuracy	Standard Deviation
+LR	87.89%	7.80%
+LDA	80.33%	14.47%
+KNN	84.78%	10.84%
+CART	94.44%	10.24%
+NB	90.11%	9.22%
+SVM	89.00%	9.94%
+The Decision Tree Classifier (CART) performed best with an accuracy of 94.44%.
 
-| Model | Mean Accuracy| Standard Deviation|
-|-------|--------------| ------------------|
-| LR    | 85.71%       | 2.05%             |
-| LDA   | 92.79%       | 5.38%             |
-| KNN   | 92.32%       | 3.54%             |
-| CART  | 99.00%       | 2.00%             |
-| NB    | 93.82%       | 3.98%             |
-| SVM   | 96.92%       | 4.11%             |
+Visualization:
+The following boxplot compares model performance, showing that CART has the highest accuracy and consistency.
 
-Visualization:  
-The boxplot compares model accuracy scores, demonstrating SVM’s superior performance.
 
- 
-Conclusion:  
-The SVM model outperformed others in predicting empowerment levels with an accuracy of 96.92%. This project demonstrates that gender and empowerment metrics can be effectively modeled using machine learning, and SVM provides reliable predictions in this context.
+Conclusion:
+CART was the most accurate model for predicting Women’s Empowerment Group. For a new data example, the model predicted the group as "High."
